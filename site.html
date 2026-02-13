@@ -17,13 +17,25 @@
         /* Utilitários Visuais */
         .text-gold { color: #D4AF37; }
         
-        /* Esconder barra de rolagem (Scrollbar Hide) para o carrossel ficar elegante */
+        /* Esconder barra de rolagem principal do carrossel */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
         .no-scrollbar {
             -ms-overflow-style: none;  /* IE and Edge */
             scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Estilo da barra de rolagem INTERNA do texto (Fina e Dourada) */
+        .text-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .text-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .text-scroll::-webkit-scrollbar-thumb {
+            background-color: #D4AF37;
+            border-radius: 4px;
         }
 
         /* Animações */
@@ -38,7 +50,7 @@
         <div class="absolute inset-0 w-full h-full">
             <img src="./images/fotoBanner02.jpeg" 
                  alt="Sócios Sampaio, Magalhães & Silva" 
-                 class="w-full h-full object-contain object-top md:object-cover md:object-top brightness-[0.85]">
+                 class="w-full h-full object-contain object-top md:object-cover md:object-top brightness-[0.90]">
         </div>
 
         <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/90 via-40% to-transparent"></div>
@@ -124,57 +136,83 @@
             <p class="text-zinc-500 text-xs mt-2 uppercase tracking-widest animate-pulse">Deslize para o lado →</p>
         </div>
 
-        <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar w-full h-[600px] md:h-[700px]">
+        <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar w-full h-[85vh] md:h-[800px]">
 
             <div class="snap-center min-w-full w-full h-full relative flex-shrink-0 group overflow-hidden">
-                <img src="./images/fotoBanner02.jpeg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent"></div>
+                <img src="./images/fotoBanner02.jpeg" class="absolute inset-0 w-full h-full object-contain object-top md:object-cover md:object-top opacity-100 transition-transform duration-700">
                 
-                <div class="absolute bottom-0 left-0 p-8 md:p-16 max-w-2xl">
-                    <span class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] block mb-3">Quem Somos</span>
-                    <h3 class="text-3xl md:text-5xl text-white font-medium mb-4">Sampaio, Magalhães & Silva</h3>
-                    <p class="text-zinc-300 text-sm md:text-base leading-relaxed font-light border-l-2 border-[#D4AF37] pl-4">
-                        Fundado com a missão de romper com a advocacia tradicional, unimos técnica jurídica apurada com visão de negócios. Somos seus aliados estratégicos na busca por justiça e resultados.
-                    </p>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                
+                <div class="absolute bottom-0 left-0 w-full md:w-1/2 p-6 md:p-12">
+                    <div class="bg-zinc-950/95 backdrop-blur-md border-l-4 border-[#D4AF37] p-6 rounded-tr-2xl shadow-2xl">
+                        <span class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] block mb-3 drop-shadow-sm">Quem Somos</span>
+                        <h3 class="text-2xl md:text-4xl text-white font-medium mb-4 drop-shadow-md">Sampaio, Magalhães & Silva</h3>
+                        <div class="text-zinc-200 text-sm md:text-base leading-relaxed font-light text-scroll overflow-y-auto max-h-[35vh] pr-2 drop-shadow-sm">
+                            <p>
+                                Fundado com a missão de romper com a advocacia tradicional, unimos técnica jurídica apurada com visão de negócios. Somos seus aliados estratégicos na busca por justiça e resultados. Nossa atuação é pautada na ética, transparência e na busca incansável pela defesa dos interesses de nossos constituintes em todo o território nacional.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="snap-center min-w-full w-full h-full relative flex-shrink-0 group overflow-hidden">
-                <img src="./images/fotoRaissa.jpeg" class="absolute inset-0 w-full h-full object-cover object-top opacity-70 group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                <img src="./images/fotoRaissa.jpeg" class="absolute inset-0 w-full h-full object-cover object-top opacity-100 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                 
-                <div class="absolute bottom-0 left-0 p-8 md:p-16">
-                    <h3 class="text-3xl md:text-5xl text-white font-medium mb-2">Dra. Raissa Magalhães</h3>
-                    <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] block mb-4">Especialista em Direito Civil</span>
-                    <p class="text-zinc-400 text-sm max-w-md font-light">
-                        Referência em resolução de conflitos e proteção patrimonial, com atuação focada na segurança jurídica das famílias e empresas.
-                    </p>
+                <div class="absolute bottom-0 left-0 w-full md:w-1/2 p-6 md:p-12">
+                    <div class="bg-zinc-950/95 backdrop-blur-md border-l-4 border-[#D4AF37] p-6 rounded-tr-2xl shadow-2xl">
+                        <h3 class="text-2xl md:text-4xl text-white font-medium mb-1 drop-shadow-md">Dra. Raissa Magalhães</h3>
+                        <span class="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] block mb-4 drop-shadow-sm">Direito Civil & Previdenciário</span>
+                        <div class="text-zinc-200 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[35vh] pr-2 space-y-3 drop-shadow-sm">
+                            <p>
+                                Advogada formada desde 2011, com uma trajetória marcada pela defesa dos direitos sociais e humanos, já ocupou cargos públicos na área consolidando sua experiência e compromisso com a justiça.
+                            </p>
+                            <p>
+                                Em 2015, junto com os Drs. Dario Sampaio e Joana Silva, fundou o escritório Magalhães, Sampaio e Silva. Atualmente é responsável pela carteira Previdenciária, atuando com dedicação para garantir os direitos e a segurança jurídica dos seus clientes.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="snap-center min-w-full w-full h-full relative flex-shrink-0 group overflow-hidden">
-                <img src="./images/fotoDario.jpeg" class="absolute inset-0 w-full h-full object-cover object-top opacity-70 group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                <img src="./images/fotoDario.jpeg" class="absolute inset-0 w-full h-full object-cover object-top opacity-100 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                 
-                <div class="absolute bottom-0 left-0 p-8 md:p-16">
-                    <h3 class="text-3xl md:text-5xl text-white font-medium mb-2">Dr. Dario Sampaio</h3>
-                    <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] block mb-4">Sócio Fundador</span>
-                    <p class="text-zinc-400 text-sm max-w-md font-light">
-                        Estrategista jurídico com vasta experiência em negociações complexas e direito empresarial.
-                    </p>
+                <div class="absolute bottom-0 left-0 w-full md:w-1/2 p-6 md:p-12">
+                    <div class="bg-zinc-950/95 backdrop-blur-md border-l-4 border-[#D4AF37] p-6 rounded-tr-2xl shadow-2xl">
+                        <h3 class="text-2xl md:text-4xl text-white font-medium mb-1 drop-shadow-md">Dr. Dario Sampaio</h3>
+                        <span class="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] block mb-4 drop-shadow-sm">Sócio Fundador & Civil</span>
+                        <div class="text-zinc-200 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[35vh] pr-2 space-y-3 drop-shadow-sm">
+                            <p>
+                                Advogado desde 2017 e também formado em pedagogia em 2015. Junto com a Dra. Raissa Magalhães e Joana Silva, fundou o escritório Magalhães, Sampaio e Silva, consolidando uma Advocacia voltada para a excelência e segurança jurídica.
+                            </p>
+                            <p>
+                                Com ampla experiência em Inventários, Usucapiões, Direito Imobiliário e procedimentos Cartorários em geral, atua de forma estratégica na regularização patrimonial.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="snap-center min-w-full w-full h-full relative flex-shrink-0 group overflow-hidden">
-                <img src="./images/fotoJoana.jpeg" class="absolute inset-0 w-full h-full object-cover object-top opacity-70 group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+                <img src="./images/fotoJoana.jpeg" class="absolute inset-0 w-full h-full object-cover object-top opacity-100 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
                 
-                <div class="absolute bottom-0 left-0 p-8 md:p-16">
-                    <h3 class="text-3xl md:text-5xl text-white font-medium mb-2">Dra. Joana Silva</h3>
-                    <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] block mb-4">Especialista Trabalhista</span>
-                    <p class="text-zinc-400 text-sm max-w-md font-light">
-                        Atuação incisiva na defesa dos direitos trabalhistas e no compliance corporativo para prevenção de riscos.
-                    </p>
+                <div class="absolute bottom-0 left-0 w-full md:w-1/2 p-6 md:p-12">
+                    <div class="bg-zinc-950/95 backdrop-blur-md border-l-4 border-[#D4AF37] p-6 rounded-tr-2xl shadow-2xl">
+                        <h3 class="text-2xl md:text-4xl text-white font-medium mb-1 drop-shadow-md">Dra. Joana Silva</h3>
+                        <span class="text-[#D4AF37] text-[10px] uppercase tracking-[0.2em] block mb-4 drop-shadow-sm">Trabalhista & Consumidor</span>
+                        <div class="text-zinc-200 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[35vh] pr-2 space-y-3 drop-shadow-sm">
+                            <p>
+                                Advogada desde 2014. Com experiência em grandes escritórios em Fortaleza, decidiu empreender e fundar o escritório Magalhães, Sampaio e Silva, ao lado de Dario Sampaio e Raissa Magalhães.
+                            </p>
+                            <p>
+                                Atualmente Joana está à frente da carteira Trabalhista, Cível e Direito do Consumidor, atuando com comprometimento e estratégia para oferecer soluções jurídicas eficientes.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
