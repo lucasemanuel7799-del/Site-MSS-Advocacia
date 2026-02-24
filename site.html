@@ -54,27 +54,33 @@
             text-shadow: 0 0 10px #00ff41, 0 0 20px #00ff41;
             letter-spacing: 2px;
         }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none;
+        }
+        .modal.open {
+            display: flex;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-300 antialiased overflow-x-hidden selection:bg-[#D4AF37] selection:text-black">
 
-    <header id="hero" class="relative w-full h-screen min-h-175 bg-zinc-950 overflow-hidden">
+    <header id="hero" class="relative w-full h-screen min-h-[700px] bg-zinc-950 overflow-hidden">
         <div class="absolute inset-0 w-full h-full">
             <img src="./images/fotoBanner02.jpeg" alt="Sócios Magalhães, Sampaio & Silva" class="w-full h-full object-contain object-top md:object-cover md:object-top brightness-[0.90]">
         </div>
-        <div class="absolute inset-0 bg-linear-to-t from-zinc-950 via-zinc-950/90 via-40% to-transparent"></div>
-        <div class="absolute inset-0 bg-linear-to-b from-black/80 via-black/20 via-30% to-transparent"></div>
-        <div class="hidden md:block absolute inset-0 bg-linear-to-r from-zinc-950/50 via-transparent to-zinc-950/50"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/90 via-40% to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 via-30% to-transparent"></div>
+        <div class="hidden md:block absolute inset-0 bg-gradient-to-r from-zinc-950/50 via-transparent to-zinc-950/50"></div>
 
         <div class="relative z-10 h-full flex flex-col items-center justify-end pb-16 px-6 text-center max-w-5xl mx-auto">
-            <img src="./images/logo-oficial.png" 
-                 alt="Logo SMS" 
-                 class="w-[320px] md:w-125 object-contain drop-shadow-2xl filter contrast-125 mb-8 animate-fade-in-up">
+            <img src="./images/logo-oficial.png" alt="Logo SMS" class="w-[320px] md:w-[500px] object-contain drop-shadow-2xl filter contrast-125 mb-8 animate-fade-in-up">
             <h1 class="text-3xl md:text-5xl lg:text-6xl text-white leading-tight font-medium tracking-wide mb-6 drop-shadow-xl legible-text-shadow">
-                Excelência Jurídica <br> <span class="italic font-light text-[#D4AF37]">Personalizada</span>
+                Estrategia juridica <br> <span class="italic font-light text-[#D4AF37]">Inteligente para o seu Futuro</span>
             </h1>
             <p class="text-zinc-300 text-sm md:text-lg max-w-2xl mx-auto font-light tracking-wide mb-10 leading-relaxed drop-shadow-md legible-text-shadow">
-                Uma abordagem moderna e estratégica para proteger o seu patrimônio, sua liberdade e seus negócios.
+                Soluções jurídicas estratégicas com atendimento personalizado e compromisso absoluto com os seus melhores resultados.
             </p>
             <a href="https://wa.me/5585991906238" class="btn-glow group inline-flex items-center gap-4 text-[#D4AF37] border border-[#D4AF37]/50 px-8 py-3 rounded-full hover:bg-[#D4AF37] hover:text-zinc-950 transition-all duration-500 uppercase tracking-[0.2em] text-xs font-bold shadow-[0_0_25px_rgba(212,175,55,0.15)] bg-black/40 backdrop-blur-md">
                 Agendar Consulta <span class="group-hover:translate-x-1 transition-transform">→</span>
@@ -85,7 +91,7 @@
     <section class="relative z-20 pb-20 px-6 bg-zinc-950 -mt-6">
         <div class="max-w-5xl mx-auto">
             <div class="flex justify-center mb-16">
-                <div class="w-px h-24 bg-linear-to-b from-[#D4AF37] to-transparent opacity-80"></div>
+                <div class="w-[1px] h-24 bg-gradient-to-b from-[#D4AF37] to-transparent opacity-80"></div>
             </div>
             <div class="text-center mb-16">
                 <span class="text-[#D4AF37] text-[10px] uppercase tracking-[0.4em] opacity-80">Nossa Expertise</span>
@@ -93,48 +99,45 @@
             </div>
             <div class="space-y-0">
                 <div class="service-item group border-t border-zinc-800 py-10 flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:border-[#D4AF37]/60 transition-colors duration-500 cursor-default">
-                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito Civil</h3>
-                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Resolução de conflitos contratuais, responsabilidade civil, família e sucessões. Foco na proteção patrimonial e blindagem jurídica.</p>
+                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito Tributário</h3>
+                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Redução de carga tributaria, defesa em exucaões fiscais, planejamento tributario e recuperação de creditos.</p>
                     <div class="hidden md:block text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 duration-300">↗</div>
                 </div>
                 <div class="service-item group border-t border-zinc-800 py-10 flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:border-[#D4AF37]/60 transition-colors duration-500 cursor-default">
-                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito Trabalhista</h3>
-                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Assessoria preventiva para empresas e defesa estratégica em reclamatórias. Compliance e redução de passivos.</p>
+                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito Previdenciario</h3>
+                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Aposentadorias, revisões de beneficios, BPC/LOAS, beneficios por incapacidade e planejamento previdenciario.</p>
                     <div class="hidden md:block text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 duration-300">↗</div>
                 </div>
                 <div class="service-item group border-t border-zinc-800 py-10 flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:border-[#D4AF37]/60 transition-colors duration-500 cursor-default">
-                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito Imobiliário</h3>
-                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Assessoria em compra e venda, regularização de imóveis, usucapião, contratos de locação e segurança em transações imobiliárias.</p>
-                    <div class="hidden md:block text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 duration-300">↗</div>
-                </div>
-                <div class="service-item group border-t border-b border-zinc-800 py-10 flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:border-[#D4AF37]/60 transition-colors duration-500 cursor-default">
-                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito Previdenciário</h3>
-                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Planejamento de aposentadoria e revisão de benefícios com agilidade e segurança jurídica.</p>
+                    <h3 class="text-2xl text-white w-full md:w-1/3 font-medium">Direito da Familia</h3>
+                    <p class="text-zinc-500 font-light text-sm leading-relaxed w-full md:w-2/3 group-hover:text-zinc-300 transition-colors">Divórcios, Inventarios, pensão alimentícia, guarda, uniao estavel e sucessões.</p>
                     <div class="hidden md:block text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 duration-300">↗</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-zinc-900 border-t border-zinc-800">
+    <section class="bg-zinc-900 border-t border-zinc-800 relative z-10">
         <div class="text-center pt-16 pb-8">
             <h2 class="text-2xl md:text-3xl text-white font-light">Nossa Equipe</h2>
             <p class="text-zinc-500 text-xs mt-2 uppercase tracking-widest animate-pulse md:hidden">Deslize para o lado →</p>
         </div>
 
-        <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar w-full h-[90vh] md:h-187.5">
+        <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar w-full h-[90vh] md:h-[750px]">
 
-            <div class="snap-center min-w-full w-full h-full shrink-0 overflow-hidden">
+            <div class="snap-center min-w-full w-full h-full flex-shrink-0 overflow-hidden">
                 <div class="w-full h-full relative md:hidden">
                     <img src="./images/fotoBanner02.jpeg" class="absolute inset-0 w-full h-full object-contain object-top opacity-100 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 w-full p-8 pb-12">
                         <div class="border-l-2 border-[#D4AF37] pl-4">
                             <span class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] block mb-3 font-bold">Quem Somos</span>
                             <h3 class="text-2xl text-white font-medium mb-4 legible-text-shadow leading-tight">Magalhães, Sampaio & Silva</h3>
-                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[30vh] pr-2 text-justify mb-6">
-                                <p>Fundado com a missão de romper com a advocacia tradicional, unimos técnica jurídica apurada com visão de negócios. Somos seus aliados estratégicos na busca por justiça e resultados.</p>
+                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-justify mb-4">
+                                <p>Magalhães, Sampaio e Silva – Advocacia e Consultoria é um escritório jurídico fundado em 2015, com atuação pautada na ética, na excelência técnica e no compromisso com a segurança jurídica de seus clientes.</p>
                             </div>
+                            <button onclick="openModal('modal-escritorio')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-6 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler História Completa</button>
+                            
                             <a href="https://wa.me/5585991906238?text=Olá, quero resolver meu problema jurídico." class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-md shadow-[#D4AF37]/20 hover:bg-[#b5952f] transition-all">
                                 Quero Resolver Meu Problema
                             </a>
@@ -143,14 +146,17 @@
                 </div>
                 <div class="hidden md:flex w-full h-full bg-zinc-950">
                     <div class="w-1/2 h-full flex items-start justify-end p-16 pt-24">
-                        <div class="max-w-xl w-full">
+                        <div class="max-w-2xl w-full">
                             <div class="border-l-2 border-[#D4AF37] pl-8">
                                 <span class="text-[#D4AF37] text-sm uppercase tracking-[0.3em] block mb-4 font-bold">Quem Somos</span>
                                 <h3 class="text-5xl text-white font-medium mb-8 leading-tight">Magalhães, Sampaio <br>& Silva</h3>
-                                <div class="text-zinc-400 text-base leading-relaxed font-light text-scroll overflow-y-auto max-h-[40vh] pr-4 space-y-6 text-justify mb-8">
-                                    <p>Fundado com a missão de romper com a advocacia tradicional, unimos técnica jurídica apurada com visão de negócios. Somos seus aliados estratégicos na busca por justiça e resultados.</p>
-                                    <p>Nossa atuação é pautada na ética, transparência e na busca incansável pela defesa dos interesses de nossos constituintes em todo o território nacional.</p>
+                                <div class="text-zinc-400 text-base leading-relaxed font-light text-justify mb-4 space-y-4">
+                                    <p>Magalhães, Sampaio e Silva – Advocacia e Consultoria é um escritório jurídico fundado em 2015, com atuação pautada na ética, na excelência técnica e no compromisso com a segurança jurídica de seus clientes.</p>
+                                    <p>Inicialmente estabelecido com foco regional no Ceará, o escritório apresentou crescimento sólido e, desde 2022, expandiu sua atuação para todo o território nacional, oferecendo atendimento estratégico e personalizado a pessoas físicas e jurídicas.</p>
                                 </div>
+                                <button onclick="openModal('modal-escritorio')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-8 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler História Completa</button>
+                                
+                                <br>
                                 <a href="https://wa.me/5585991906238?text=Olá, quero resolver meu problema jurídico." class="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-lg shadow-[#D4AF37]/20 hover:bg-[#b5952f] hover:-translate-y-1 transition-all">
                                     Quero Resolver Meu Problema
                                 </a>
@@ -159,62 +165,69 @@
                     </div>
                     <div class="w-1/2 h-full relative overflow-hidden">
                          <img src="./images/fotoBanner02.jpeg" class="w-full h-full object-cover object-top brightness-90">
-                         <div class="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-zinc-950 to-transparent"></div>
+                         <div class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-zinc-950 to-transparent"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="snap-center min-w-full w-full h-full shrink-0 overflow-hidden">
+            <div class="snap-center min-w-full w-full h-full flex-shrink-0 overflow-hidden">
                 <div class="w-full h-full relative md:hidden">
                     <img src="./images/fotoRaissa.jpeg" class="absolute inset-0 w-full h-full object-contain object-top opacity-100 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 w-full p-8 pb-12">
                         <div class="border-l-2 border-[#D4AF37] pl-4">
                             <span class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] block mb-3 font-bold">Civil & Previdenciário</span>
-                            <h3 class="text-2xl text-white font-medium mb-4 legible-text-shadow whitespace-nowrap">Dra. Raissa Magalhães</h3>
-                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[30vh] pr-2 text-justify mb-6">
-                                <p>Advogada formada desde 2011, com uma trajetória marcada pela defesa dos direitos sociais e humanos. Atualmente é responsável pela carteira Previdenciária.</p>
+                            <h3 class="text-2xl text-white font-medium mb-4 legible-text-shadow whitespace-nowrap">Dra. Rayssa Magalhães</h3>
+                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-justify mb-4">
+                                <p>Rayssa Uchoa Magalhães é advogada desde 2011, com trajetória profissional marcada pela defesa dos direitos sociais e humanos. Cearense, orgulhosa de suas raízes, construiu sua carreira com base no compromisso com a justiça.</p>
                             </div>
-                            <a href="https://wa.me/5585999859720?text=Olá, gostaria de falar com a Dra. Raissa." class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-md shadow-[#D4AF37]/20 hover:bg-[#b5952f] transition-all">
-                                Falar com Dra. Raissa
+                            <button onclick="openModal('modal-rayssa')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-6 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler Biografia Completa</button>
+                            
+                            <a href="https://wa.me/5585999859720?text=Olá, gostaria de falar com a Dra. Rayssa." class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-md shadow-[#D4AF37]/20 hover:bg-[#b5952f] transition-all">
+                                Falar com Dra. Rayssa
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="hidden md:flex w-full h-full bg-zinc-950">
                     <div class="w-1/2 h-full flex items-start justify-end p-16 pt-24">
-                        <div class="max-w-xl w-full">
+                        <div class="max-w-2xl w-full">
                             <div class="border-l-2 border-[#D4AF37] pl-8">
                                 <span class="text-[#D4AF37] text-sm uppercase tracking-[0.3em] block mb-4 font-bold">Civil & Previdenciário</span>
-                                <h3 class="text-5xl text-white font-medium mb-8 leading-tight whitespace-nowrap">Dra. Raissa Magalhães</h3>
-                                <div class="text-zinc-400 text-base leading-relaxed font-light text-scroll overflow-y-auto max-h-[40vh] pr-4 space-y-6 text-justify mb-8">
-                                    <p>Advogada formada desde 2011, com uma trajetória marcada pela defesa dos direitos sociais e humanos, já ocupou cargos públicos na área consolidando sua experiência.</p>
-                                    <p>Em 2015, junto com os Drs. Dario Sampaio e Joana Silva, fundou o escritório Magalhães, Sampaio e Silva. Atualmente é responsável pela carteira Previdenciária.</p>
+                                <h3 class="text-5xl text-white font-medium mb-8 leading-tight whitespace-nowrap">Dra. Rayssa Magalhães</h3>
+                                <div class="text-zinc-400 text-base leading-relaxed font-light text-justify mb-4 space-y-4">
+                                    <p>Rayssa Uchoa Magalhães é advogada desde 2011, com trajetória profissional marcada pela defesa dos direitos sociais e humanos. Cearense, orgulhosa de suas raízes, construiu sua carreira com base no compromisso com a justiça, tendo inclusive exercido cargos públicos na área.</p>
+                                    <p>Em 2015, fundou o escritório Magalhães, Sampaio e Silva – Advocacia e Consultoria, ao lado de Joana Angélica Silva e Dário Sampaio. Desde então, atua de forma estratégica e dedicada, sendo atualmente responsável pela carteira Previdenciária do escritório.</p>
                                 </div>
-                                <a href="https://wa.me/5585999859720?text=Olá, gostaria de falar com a Dra. Raissa." class="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-lg shadow-[#D4AF37]/20 hover:bg-[#b5952f] hover:-translate-y-1 transition-all">
-                                    Falar com Dra. Raissa
+                                <button onclick="openModal('modal-rayssa')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-8 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler Biografia Completa</button>
+                                
+                                <br>
+                                <a href="https://wa.me/5585999859720?text=Olá, gostaria de falar com a Dra. Rayssa." class="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-lg shadow-[#D4AF37]/20 hover:bg-[#b5952f] hover:-translate-y-1 transition-all">
+                                    Falar com Dra. Rayssa
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="w-1/2 h-full relative overflow-hidden">
                          <img src="./images/fotoRaissa.jpeg" class="w-full h-full object-cover object-top brightness-90">
-                         <div class="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-zinc-950 to-transparent"></div>
+                         <div class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-zinc-950 to-transparent"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="snap-center min-w-full w-full h-full shrink-0 overflow-hidden">
+            <div class="snap-center min-w-full w-full h-full flex-shrink-0 overflow-hidden">
                 <div class="w-full h-full relative md:hidden">
                     <img src="./images/fotoDario.jpeg" class="absolute inset-0 w-full h-full object-contain object-top opacity-100 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 w-full p-8 pb-12">
                         <div class="border-l-2 border-[#D4AF37] pl-4">
                             <span class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] block mb-3 font-bold">Sócio Fundador & Civil</span>
                             <h3 class="text-3xl text-white font-medium mb-4 legible-text-shadow whitespace-nowrap">Dr. Dario Sampaio</h3>
-                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[30vh] pr-2 text-justify mb-6">
-                                <p>Advogado desde 2017 e também formado em pedagogia. Atua de forma estratégica na regularização patrimonial e na solução de questões jurídicas envolvendo imóveis.</p>
+                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-justify mb-4">
+                                <p>Dário Fonseca Sampaio é advogado desde 2017 e também graduado em Pedagogia, formação que contribui para uma atuação didática, clara e acessível junto aos clientes.</p>
                             </div>
+                            <button onclick="openModal('modal-dario')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-6 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler Biografia Completa</button>
+                            
                             <a href="https://wa.me/5585987385797?text=Olá, gostaria de falar com o Dr. Dario." class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-md shadow-[#D4AF37]/20 hover:bg-[#b5952f] transition-all">
                                 Falar com Dr. Dario
                             </a>
@@ -223,14 +236,17 @@
                 </div>
                 <div class="hidden md:flex w-full h-full bg-zinc-950">
                     <div class="w-1/2 h-full flex items-start justify-end p-16 pt-24">
-                        <div class="max-w-xl w-full">
+                        <div class="max-w-2xl w-full">
                             <div class="border-l-2 border-[#D4AF37] pl-8">
                                 <span class="text-[#D4AF37] text-sm uppercase tracking-[0.3em] block mb-4 font-bold">Sócio Fundador & Civil</span>
                                 <h3 class="text-5xl text-white font-medium mb-8 leading-tight whitespace-nowrap">Dr. Dario Sampaio</h3>
-                                <div class="text-zinc-400 text-base leading-relaxed font-light text-scroll overflow-y-auto max-h-[40vh] pr-4 space-y-6 text-justify mb-8">
-                                    <p>Advogado desde 2017 e também formado em pedagogia em 2015. Fundou o escritório consolidando uma Advocacia voltada para a excelência e segurança jurídica.</p>
-                                    <p>Com ampla experiência em Inventários, Usucapiões, Direito Imobiliário e procedimentos Cartorários em geral, atua de forma estratégica na regularização patrimonial.</p>
+                                <div class="text-zinc-400 text-base leading-relaxed font-light text-justify mb-4 space-y-4">
+                                    <p>Dário Fonseca Sampaio é advogado desde 2017 e também graduado em Pedagogia, formação que contribui para uma atuação didática, clara e acessível junto aos clientes. Em 2015, ao lado de Rayssa Uchoa Magalhães e Joana Angélica Silva, fundou o escritório Magalhães, Sampaio e Silva.</p>
+                                    <p>Possui ampla experiência em Direito Imobiliário, Inventários e Usucapião, bem como em procedimentos cartorários em geral, atuando de forma estratégica na regularização patrimonial.</p>
                                 </div>
+                                <button onclick="openModal('modal-dario')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-8 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler Biografia Completa</button>
+                                
+                                <br>
                                 <a href="https://wa.me/5585987385797?text=Olá, gostaria de falar com o Dr. Dario." class="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-lg shadow-[#D4AF37]/20 hover:bg-[#b5952f] hover:-translate-y-1 transition-all">
                                     Falar com Dr. Dario
                                 </a>
@@ -239,22 +255,24 @@
                     </div>
                     <div class="w-1/2 h-full relative overflow-hidden">
                          <img src="./images/fotoDario.jpeg" class="w-full h-full object-cover object-top brightness-90">
-                         <div class="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-zinc-950 to-transparent"></div>
+                         <div class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-zinc-950 to-transparent"></div>
                     </div>
                 </div>
             </div>
 
-            <div class="snap-center min-w-full w-full h-full shrink-0 overflow-hidden">
+            <div class="snap-center min-w-full w-full h-full flex-shrink-0 overflow-hidden">
                 <div class="w-full h-full relative md:hidden">
                     <img src="./images/fotoJoana.jpeg" class="absolute inset-0 w-full h-full object-contain object-top opacity-100 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-linear-to-t from-black via-black/90 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
                     <div class="absolute bottom-0 left-0 w-full p-8 pb-12">
                         <div class="border-l-2 border-[#D4AF37] pl-4">
                             <span class="text-[#D4AF37] text-xs uppercase tracking-[0.3em] block mb-3 font-bold">Trabalhista & Consumidor</span>
                             <h3 class="text-3xl text-white font-medium mb-4 legible-text-shadow whitespace-nowrap">Dra. Joana Silva</h3>
-                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-scroll overflow-y-auto max-h-[30vh] pr-2 text-justify mb-6">
-                                <p>Atualmente Joana está à frente da carteira Trabalhista, Cível e Direito do Consumidor, atuando com comprometimento e estratégia para oferecer soluções jurídicas eficientes.</p>
+                            <div class="text-zinc-300 text-sm leading-relaxed font-light text-justify mb-4">
+                                <p>Joana Angélica Silva é advogada desde 2014, com atuação sólida e reconhecida nas áreas Cível em Geral, Direito do Consumidor e Direito do Trabalho.</p>
                             </div>
+                            <button onclick="openModal('modal-joana')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-6 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler Biografia Completa</button>
+                            
                             <a href="https://wa.me/5585988620697?text=Olá, gostaria de falar com a Dra. Joana." class="inline-flex items-center justify-center w-full px-6 py-3 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-md shadow-[#D4AF37]/20 hover:bg-[#b5952f] transition-all">
                                 Falar com Dra. Joana
                             </a>
@@ -263,14 +281,17 @@
                 </div>
                 <div class="hidden md:flex w-full h-full bg-zinc-950">
                     <div class="w-1/2 h-full flex items-start justify-end p-16 pt-24">
-                        <div class="max-w-xl w-full">
+                        <div class="max-w-2xl w-full">
                             <div class="border-l-2 border-[#D4AF37] pl-8">
                                 <span class="text-[#D4AF37] text-sm uppercase tracking-[0.3em] block mb-4 font-bold">Trabalhista & Consumidor</span>
                                 <h3 class="text-5xl text-white font-medium mb-8 leading-tight whitespace-nowrap">Dra. Joana Silva</h3>
-                                <div class="text-zinc-400 text-base leading-relaxed font-light text-scroll overflow-y-auto max-h-[40vh] pr-4 space-y-6 text-justify mb-8">
-                                    <p>Advogada desde 2014. Com experiência em grandes escritórios, decidiu empreender e fundar o escritório Magalhães, Sampaio e Silva.</p>
-                                    <p>Atualmente Joana está à frente da carteira Trabalhista, Cível e Direito do Consumidor, atuando com comprometimento e estratégia para oferecer soluções jurídicas eficientes e personalizadas.</p>
+                                <div class="text-zinc-400 text-base leading-relaxed font-light text-justify mb-4 space-y-4">
+                                    <p>Joana Angélica Silva é advogada desde 2014, com atuação sólida e reconhecida nas áreas Cível em Geral, Direito do Consumidor e Direito do Trabalho.</p>
+                                    <p>Após adquirir experiência em grandes escritórios de Fortaleza, fundou, em 2015, o escritório Magalhães, Sampaio e Silva – Advocacia e Consultoria. O escritório iniciou suas atividades com foco em Fortaleza e Canindé e expandiu para todo o território nacional.</p>
                                 </div>
+                                <button onclick="openModal('modal-joana')" class="text-[#D4AF37] text-xs uppercase tracking-widest hover:text-white transition-colors mb-8 underline underline-offset-4 decoration-[#D4AF37]/50 font-medium">Ler Biografia Completa</button>
+                                
+                                <br>
                                 <a href="https://wa.me/5585988620697?text=Olá, gostaria de falar com a Dra. Joana." class="inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-zinc-950 font-bold uppercase text-xs tracking-widest rounded shadow-lg shadow-[#D4AF37]/20 hover:bg-[#b5952f] hover:-translate-y-1 transition-all">
                                     Falar com Dra. Joana
                                 </a>
@@ -279,7 +300,7 @@
                     </div>
                     <div class="w-1/2 h-full relative overflow-hidden">
                          <img src="./images/fotoJoana.jpeg" class="w-full h-full object-cover object-top brightness-90">
-                         <div class="absolute inset-y-0 left-0 w-40 bg-linear-to-r from-zinc-950 to-transparent"></div>
+                         <div class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-zinc-950 to-transparent"></div>
                     </div>
                 </div>
             </div>
@@ -287,13 +308,13 @@
         </div>
     </section>
 
-    <footer class="bg-black py-20 px-6 border-t border-zinc-900">
+    <footer class="bg-black py-20 px-6 border-t border-zinc-900 relative z-10">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
             
             <div class="flex flex-col items-center md:items-start space-y-6">
                 <img src="./images/logo-oficial.png" alt="Logo SMS" class="w-32 grayscale opacity-60 hover:opacity-100 transition-all duration-500">
                 <div class="space-y-2 text-sm text-zinc-400 font-light">
-                    <p>Dra. Raissa Magalhães <span class="text-[#D4AF37] mx-1">|</span> OAB/CE 25.573</p>
+                    <p>Dra. Rayssa Magalhães <span class="text-[#D4AF37] mx-1">|</span> OAB/CE 25.573</p>
                     <p>Dr. Dario Sampaio <span class="text-[#D4AF37] mx-1">|</span> OAB/CE 36.800</p>
                     <p>Dra. Joana Silva <span class="text-[#D4AF37] mx-1">|</span> OAB/CE 30.162</p>
                 </div>
@@ -307,7 +328,7 @@
                 <h4 class="text-white font-medium uppercase tracking-[0.2em] text-sm border-b border-zinc-800 pb-2">Atendimento</h4>
                 <div class="space-y-3 text-base text-zinc-300 font-light font-inter">
                     <a href="tel:+5585999859720" class="group block hover:text-[#D4AF37] transition-colors">
-                        (85) 99985-9720 <span class="text-zinc-500 text-xs ml-2 group-hover:text-[#D4AF37]/70">| Dra. Raissa</span>
+                        (85) 99985-9720 <span class="text-zinc-500 text-xs ml-2 group-hover:text-[#D4AF37]/70">| Dra. Rayssa</span>
                     </a>
                     <a href="tel:+5585988620697" class="group block hover:text-[#D4AF37] transition-colors">
                         (85) 98862-0697 <span class="text-zinc-500 text-xs ml-2 group-hover:text-[#D4AF37]/70">| Dra. Joana</span>
@@ -353,7 +374,80 @@
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
     </a>
 
+    <div id="modal-escritorio" class="modal fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8">
+        <div class="bg-zinc-900 border-t-4 border-[#D4AF37] rounded-lg shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-escritorio')" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="p-8 md:p-12 overflow-y-auto text-scroll">
+                <h3 class="text-3xl text-white font-medium mb-6">Magalhães, Sampaio & Silva</h3>
+                <div class="text-zinc-300 text-sm md:text-base leading-relaxed font-light space-y-6 text-justify">
+                    <p>Magalhães, Sampaio e Silva – Advocacia e Consultoria é um escritório jurídico fundado em 2015, com atuação pautada na ética, na excelência técnica e no compromisso com a segurança jurídica de seus clientes.</p>
+                    <p>Inicialmente estabelecido com foco regional no Ceará, o escritório apresentou crescimento sólido e, desde 2022, expandiu sua atuação para todo o território nacional, oferecendo atendimento estratégico e personalizado a pessoas físicas e jurídicas.</p>
+                    <p>Com uma equipe multidisciplinar e altamente qualificada, Magalhães, Sampaio e Silva atua nas áreas de Direito Civil em Geral, Direito do Consumidor, Direito do Trabalho, Direito Previdenciário, Direito de Família e Direito Imobiliário, além de demandas relacionadas a inventários, usucapião, regularização patrimonial, benefícios previdenciários e procedimentos cartorários.</p>
+                    <p>A atuação do escritório é orientada pela busca de soluções jurídicas eficazes, humanas e estratégicas, sempre alinhadas às necessidades específicas de cada cliente. O compromisso com a transparência, o atendimento humanizado e a responsabilidade técnica são pilares que norteiam a prática profissional do escritório.</p>
+                    <p>Magalhães, Sampaio e Silva acredita na advocacia como instrumento de transformação social, trabalhando com seriedade, dedicação e respeito para garantir direitos e construir resultados sólidos e duradouros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-rayssa" class="modal fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8">
+        <div class="bg-zinc-900 border-t-4 border-[#D4AF37] rounded-lg shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-rayssa')" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="p-8 md:p-12 overflow-y-auto text-scroll">
+                <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] block mb-2 font-bold">Civil & Previdenciário</span>
+                <h3 class="text-3xl text-white font-medium mb-6">Dra. Rayssa Magalhães</h3>
+                <div class="text-zinc-300 text-sm md:text-base leading-relaxed font-light space-y-6 text-justify">
+                    <p>Rayssa Uchoa Magalhães é advogada desde 2011, com trajetória profissional marcada pela defesa dos direitos sociais e humanos. Cearense, orgulhosa de suas raízes, construiu sua carreira com base no compromisso com a justiça, tendo inclusive exercido cargos públicos na área, o que consolidou sua experiência técnica e sensibilidade social.</p>
+                    <p>Em 2015, fundou o escritório Magalhães, Sampaio e Silva – Advocacia e Consultoria, ao lado de Joana Angélica Silva e Dário Sampaio. Desde então, atua de forma estratégica e dedicada, sendo atualmente responsável pela carteira Previdenciária do escritório.</p>
+                    <p>Sua atuação abrange Direito Previdenciário em geral, com destaque para BPC/LOAS, restabelecimento e concessão de benefícios previdenciários, auxílio-doença, aposentadorias, pensão por morte e salário-maternidade, sempre com foco na efetivação de direitos e na segurança jurídica dos clientes.</p>
+                    <p>Além disso, Rayssa também atua no Direito de Família, assessorando seus clientes em demandas sensíveis como divórcios, guarda, pensão alimentícia, união estável e curatela, conduzindo cada caso com responsabilidade, empatia e técnica jurídica.</p>
+                    <p>Sua prática profissional é pautada pela ética, dedicação e busca por soluções jurídicas eficazes, humanas e personalizadas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-dario" class="modal fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8">
+        <div class="bg-zinc-900 border-t-4 border-[#D4AF37] rounded-lg shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-dario')" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="p-8 md:p-12 overflow-y-auto text-scroll">
+                <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] block mb-2 font-bold">Sócio Fundador & Civil</span>
+                <h3 class="text-3xl text-white font-medium mb-6">Dr. Dario Sampaio</h3>
+                <div class="text-zinc-300 text-sm md:text-base leading-relaxed font-light space-y-6 text-justify">
+                    <p>Dário Fonseca Sampaio é advogado desde 2017 e também graduado em Pedagogia, formação que contribui para uma atuação didática, clara e acessível junto aos clientes. Em 2015, ao lado de Rayssa Uchoa Magalhães e Joana Angélica Silva, fundou o escritório Magalhães, Sampaio e Silva – Advocacia e Consultoria, consolidando uma advocacia pautada na excelência e na segurança jurídica.</p>
+                    <p>Possui ampla experiência em Direito Imobiliário, Inventários e Usucapião, bem como em procedimentos cartorários em geral, atuando de forma estratégica na regularização patrimonial e na solução de demandas jurídicas relacionadas a bens imóveis.</p>
+                    <p>Além disso, atua em causas cíveis em geral, assessorando seus clientes com foco na agilidade, na prevenção de litígios e na efetiva proteção de direitos. Também desenvolve atuação específica em isenção de Imposto de Renda para aposentados e pessoas com doenças graves, buscando garantir o reconhecimento de benefícios legais e a restituição de valores quando cabível.</p>
+                    <p>Sua prática profissional é marcada pelo comprometimento, pela técnica jurídica e pela busca constante por soluções eficazes e seguras, alinhadas às necessidades individuais de cada cliente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-joana" class="modal fixed inset-0 z-50 items-center justify-center bg-black/80 backdrop-blur-sm p-4 md:p-8">
+        <div class="bg-zinc-900 border-t-4 border-[#D4AF37] rounded-lg shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-joana')" class="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="p-8 md:p-12 overflow-y-auto text-scroll">
+                <span class="text-[#D4AF37] text-xs uppercase tracking-[0.2em] block mb-2 font-bold">Trabalhista & Consumidor</span>
+                <h3 class="text-3xl text-white font-medium mb-6">Dra. Joana Silva</h3>
+                <div class="text-zinc-300 text-sm md:text-base leading-relaxed font-light space-y-6 text-justify">
+                    <p>Joana Angélica Silva é advogada desde 2014, com atuação sólida e reconhecida nas áreas Cível em Geral, Direito do Consumidor e Direito do Trabalho.</p>
+                    <p>Após adquirir experiência em grandes escritórios de Fortaleza, fundou, em 2015, o escritório Magalhães, Sampaio e Silva – Advocacia e Consultoria, ao lado de Rayssa Magalhães e Dário Sampaio. O escritório iniciou suas atividades com foco em Fortaleza e Canindé e, diante de seu crescimento e consolidação, expandiu sua atuação para todo o território nacional a partir de 2022.</p>
+                    <p>Atualmente, Joana Angélica está à frente das principais carteiras do escritório, conduzindo os casos com estratégia, comprometimento e responsabilidade técnica. Sua atuação é marcada pela busca constante por soluções jurídicas eficazes, seguras e personalizadas, sempre alinhadas às necessidades de cada cliente e aos princípios éticos da advocacia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // Lógica do botão flutuante
         window.addEventListener('scroll', function() {
             const floatBtn = document.getElementById('whatsapp-float');
             const heroHeight = document.getElementById('hero').offsetHeight;
@@ -364,6 +458,25 @@
                 floatBtn.classList.remove('visible');
             }
         });
+
+        // Lógica dos Modais
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fechar modal clicando fora da caixa
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('open');
+                document.body.style.overflow = 'auto';
+            }
+        }
     </script>
 
 </body>
